@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="POST" action="{{ url_for('auth.signup') }}" autocomplete="off">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Sign Up!">
+    </form>
+    <p>Already have and account? <a href="{{ url_for('auth.login') }}">Log In!</a></p>
+{% endblock %}
